@@ -1,0 +1,11 @@
+.ArrowGroup {
+	display: flex;
+	align-items: center;
+	position: absolute;
+}
+
+@for $i from 1 through 3 {
+	.Transition-#{$i} {
+		transition: all #{$i * 320}ms ease;
+	}
+}

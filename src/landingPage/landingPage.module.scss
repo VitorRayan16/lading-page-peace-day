@@ -1,0 +1,112 @@
+@import "../constants.module";
+
+.Main {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	overflow: hidden;
+	height: 90%;
+
+	.GreenCircle {
+		width: 60%;
+		height: 101%;
+		background: $main;
+		margin: 2rem 0 0 3.2rem;
+		border-radius: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	.OrangeCircle {
+		width: 60%;
+		height: 101%;
+		top: 2rem;
+		left: -5%;
+		border: 2px solid orange;
+		border-radius: 100%;
+		position: absolute;
+	}
+
+	.WhiteOuterCircle {
+		width: 54%;
+		height: 100%;
+		border-radius: 100%;
+		border: 2px solid white;
+		position: absolute;
+		bottom: -22%;
+		right: -7%;
+		z-index: 5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.WhiteInnerCircle {
+			border-radius: 100%;
+			width: 91%;
+			height: 91%;
+			border: 10px solid white;
+			z-index: 5;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+			}
+		}
+	}
+
+	.YellowPlant {
+		width: 15%;
+		height: 24%;
+		position: absolute;
+		bottom: 0;
+		left: 34%;
+		z-index: 2;
+	}
+
+	@mixin Curve($green: "Yellow") {
+		position: absolute;
+		left: -44%;
+		width: 100%;
+		height: 50%;
+		@if $green == "Green" {
+			bottom: -7%;
+			transform: rotate(20deg);
+		} @else {
+			bottom: -8%;
+			transform: rotate(3deg);
+		}
+	}
+
+	.YellowCurve {
+		@include Curve;
+		z-index: 10;
+	}
+
+	.GreenCurve {
+		@include Curve("Green");
+	}
+
+	.WhitePlant {
+		width: 8%;
+		height: 20%;
+		position: absolute;
+		bottom: 1%;
+		left: 0;
+		z-index: 100;
+		transform: rotate(-2deg);
+	}
+
+	.WhiteArrow {
+		transform: rotate(180deg);
+		bottom: 13%;
+		left: 45%;
+		z-index: 2;
+	}
+
+	.GreenArrow {
+		top: 8%;
+		right: 36%;
+		z-index: 2;
+	}
+}

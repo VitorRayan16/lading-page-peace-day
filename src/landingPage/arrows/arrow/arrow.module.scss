@@ -1,0 +1,47 @@
+$size: 0.35rem;
+.Arrow {
+	position: relative;
+	width: $size * 5;
+	height: $size * 9;
+	margin-right: 0.6rem;
+	transform: translateX(-130px);
+	opacity: 0;
+
+	@mixin point {
+		position: absolute;
+		width: $size;
+		height: $size;
+		border-radius: 100%;
+	}
+
+	.Point1 {
+		@include point;
+		left: 0;
+		top: 0;
+	}
+	.Point2 {
+		@include point;
+		left: 0;
+		bottom: 0;
+	}
+	.Point3 {
+		@include point;
+		left: $size * 2;
+		bottom: $size * 2;
+	}
+	.Point4 {
+		@include point;
+		left: $size * 2;
+		top: $size * 2;
+	}
+	.Point5 {
+		@include point;
+		right: 0;
+		bottom: $size * 4;
+	}
+}
+
+.Animation {
+	transform: translateX(0);
+	opacity: 1;
+}

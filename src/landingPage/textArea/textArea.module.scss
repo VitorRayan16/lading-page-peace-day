@@ -1,0 +1,75 @@
+@import "../../constants.module";
+
+.Wrapper {
+	width: 350px;
+	color: white;
+	// margin: 2rem 0 30% 15%;
+	z-index: 100;
+	position: absolute;
+	top: 9%;
+	left: 25%;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all 420ms ease-in;
+
+	h1 {
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	button {
+		color: $white;
+		font-size: 1rem;
+		font-weight: 600;
+		width: 80px;
+		padding: 0.3rem 0.5rem;
+		background: $second;
+		margin: 1.2rem 0 1.2rem 0;
+		border: none;
+		border-radius: 10px;
+		text-transform: uppercase;
+	}
+
+	p {
+		line-height: 1.6;
+		font-size: 0.9rem;
+		margin-bottom: 5.2rem;
+		font-family: "Roboto", sans-serif;
+		font-weight: 400;
+	}
+
+	a {
+		font-size: 0.9rem;
+	}
+
+	ul {
+		margin-top: 0.5rem;
+		display: flex;
+		align-items: center;
+
+		$liSize: 2rem;
+
+		li {
+			height: $liSize;
+			width: $liSize;
+			background: $second;
+			border-radius: 50%;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+.Move {
+	transform: translateY(0);
+	opacity: 1;
+}
